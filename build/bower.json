@@ -1,0 +1,12 @@
+{
+  "dependencies": {
+    "requirejs": "latest",
+    "almond": "latest",
+    "jquery": "latest",
+    "backbone": "latest",
+    "underscore": "latest"
+  },
+  "private": true,
+  "name": "Icecreamvsgelato",
+  "version": "0.1.0"
+}
