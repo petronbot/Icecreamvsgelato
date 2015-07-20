@@ -14,3 +14,170 @@
 /* basic structure */
 @import "variables";
 @import "fonts";
+
+
+
+/* Site theme */
+
+$cream: #fff7e3;
+$waffle: #dfa862;
+$yellow: #f1cd2f;
+$blue: #7ec7ef;
+$pink: #e99cc4;
+
+body {
+	background-color: $cream;
+	background-image: 
+		linear-gradient(90deg, rgba($waffle,.15) 50%, transparent 50%),
+		linear-gradient(rgba($waffle,.15) 50%, transparent 50%);
+	background-size: 50px 50px;
+	@include body-font;
+	font-size: 150%;
+	color: #453814;
+	text-align: center;
+}
+
+h1, h2 {
+	@include heading-font;
+}
+
+h1 {
+	margin-bottom: 0;
+}
+
+h2 {
+	margin-bottom: 0;
+}
+
+h3 {
+	margin-top: 0.25em;
+}
+
+.main-header {
+	margin: 1em auto 2em;
+}
+
+.candidates-heading {
+	span {
+		@include inline-block;
+		margin: 0 3em;
+		padding: 0 1em 0.15em;
+		background: rgba($blue, 0.5);
+		border-radius: 50%;
+
+	}
+}
+
+.candidates-container {
+	position: relative;
+}
+
+#candidates {
+	margin: 0 auto;
+	list-style-type: none;
+	li {
+		width: 35%;
+		padding-top: 35%; // Always a square
+		height: 0;
+		@include inline-block;
+
+		&:first-child { margin-right: 10%; }
+
+		&.icecream { 
+			background: transparent url('/img/ice-cream.png') no-repeat top center / 100% auto; 
+			button {
+				margin-right: -2em;
+			}
+		}
+		&.gelato { 
+			background: transparent url('/img/gelato.png') no-repeat top center / 100% auto; 
+			button {
+				margin-left: -2em;
+			}
+		}
+
+	}
+	button {
+		background-color: $waffle;
+		@include background-image(linear-gradient(hsla(0,0%,100%,.05), hsla(0,0%,0%,.1)));
+		border: none; outline: none;
+		border-radius: 1.5em;
+		box-shadow: inset 0 0 0 1px hsla(0,0%,0%,.25),
+                inset 0 2px 0 hsla(0,0%,100%,.1),
+                inset 0 1.2em 0 hsla(0,0%,100%,.05),
+                inset 0 -.2em 0 hsla(0,0%,100%,.1),
+                inset 0 -.25em 0 hsla(0,0%,0%,.5),
+                0 .25em .25em hsla(0,0%,0%,.1);
+		color: $cream;
+		cursor: pointer;
+		display: inline-block;
+		font-weight: bold;
+		line-height: 1.5;
+		margin: 0 .5em 1em;
+		padding: .5em 1.5em .75em;
+		position: relative;
+		text-decoration: none;
+		text-shadow: 0 -1px 1px hsla(0,0%,0%,.25);
+		vertical-align: middle;
+		&:hover {
+		    outline: none;
+		}
+		&:focus {
+		    box-shadow: inset 0 0 0 1px hsla(0,0%,0%,.25),
+                inset 0 2px 0 hsla(0,0%,100%,.1),
+                inset 0 1.2em 0 hsla(0,0%,100%,.05),
+                inset 0 -.2em 0 hsla(0,0%,100%,.1),
+                inset 0 -.25em 0 hsla(0,0%,0%,.5),
+                inset 0 0 0 3em hsla(0,0%,100%,.2),
+                0 .25em .25em hsla(0,0%,0%,.1);
+		}
+		&:active {
+			box-shadow: inset 0 0 0 1px hsla(0,0%,0%,.25),
+                inset 0 2px 0 hsla(0,0%,100%,.1),
+                inset 0 1.2em 0 hsla(0,0%,100%,.05),
+                inset 0 0 0 3em hsla(0,0%,100%,.2),
+                inset 0 .25em .5em hsla(0,0%,0%,.05),
+                0 -1px 1px hsla(0,0%,0%,.1),
+                0 1px 1px hsla(0,0%,100%,.25);
+			margin-top: .25em;
+			outline: none;
+			padding-bottom: .5em;
+		}
+		&[disabled='disabled'] {
+			color: #dfa862;
+		}
+	}
+}
+
+#results {
+	position: absolute;
+	top: 35%;
+	left: 0; right: 0;
+	list-style-type: none;
+	li {
+		@include inline-block;
+		width: 35%;
+		color: $cream;
+		&:first-child { margin-right: 10%; }
+		p {
+			width: 4em;
+			height: 3em;
+			border-radius: 50%;
+			font-size: 2em;
+			text-align: center;
+			padding-top: 1em;
+			line-height: 1em;
+			float: right;
+			@include text-shadow(1px, 1px, 1px, #fff);
+		}
+		span {
+			font-size: 0.5em;
+		}
+		&:nth-child(1) p {
+			background-color: rgba($yellow, 0.8);
+		}
+		&:nth-child(2) p {
+			background-color: rgba($pink, 0.8);
+		}
+	}
+}

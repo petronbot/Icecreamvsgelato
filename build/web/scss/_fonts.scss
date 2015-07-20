@@ -1,7 +1,18 @@
 /* font definitions and web fonts */
-@mixin serif { 
-    font-family: times, "times new roman", serif;
+@mixin body-font { 
+    font-family: 'Karla', sans-serif;
 }
-@mixin san-serif {
-    font-family: arial, "helvetica nue", helvetica, san-serif;
+@mixin heading-font {
+    font-family: 'Kavoon', cursive;
 }  
+
+/*
+
+font-family: 'Knewave', cursive;
+font-family: 'Londrina Outline', cursive;
+font-family: 'Londrina Shadow', cursive;
+font-family: 'Kavoon', cursive;
+
+font-family: 'Karla', sans-serif;
+
+*/

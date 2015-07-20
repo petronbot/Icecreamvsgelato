@@ -7,6 +7,8 @@
         <title>Ice Cream Vs Gelato Ultimate Showdown</title>
         <link rel="stylesheet" href="css/main.css">
         <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+        <link href='http://fonts.googleapis.com/css?family=Knewave|Londrina+Shadow|Kavoon' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Karla:400,700' rel='stylesheet' type='text/css'>
     </head>
     <body>
         <!--[if lt IE 8]>
@@ -14,20 +16,24 @@
         <![endif]-->
 
         <!-- Add your site or application content here -->
-        <header>
-            <h1>Worlds's Frozen Confection Championship</h1>
-            <h2>Weigh in on the ultimate showdown</h2>
+        <header class="main-header">
+            <h2>Worlds's Frozen Confection Championship</h2>
+            <h3>Weigh in on the ultimate showdown</h3>
         </header>
 
-        <h2>Ice Cream <span>vs</span> Gelato</h2>
+        <h1 class="candidates-heading">Ice Cream <span>vs</span> Gelato</h1>
 
-        <ul id="candidates">
-            <!-- Inserted by voteView -->
-        </ul>
+        <div class="candidates-container">
 
-        <dl id="results">
-            <!-- Inserted by resultsView -->
-        </dl>
+            <ul id="candidates">
+                <!-- Inserted by voteView -->
+            </ul>
+
+            <ul id="results">
+                <!-- Inserted by resultsView -->
+            </ul>
+
+        </div>
 
         <script data-main="js/main.js" src="js/vendor/require.js"></script>
         <!-- // <script src="js/main.js"></script> -->

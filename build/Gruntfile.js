@@ -12,7 +12,8 @@ module.exports = function (grunt) {
         baseUrl: "web/js",
         name: "main",
         out: "public/js/main.js",
-        mainConfigFile: "web/js/main.js"
+        mainConfigFile: "web/js/main.js",
+        optimize: 'none'
       },
       dev: {
         options: {

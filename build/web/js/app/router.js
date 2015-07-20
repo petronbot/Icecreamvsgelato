@@ -9,8 +9,8 @@ define(['backbone', 'app/view/vote', 'app/view/results'], function (Backbone, Vo
         },
 
         routes: {
-            "": "home",
-            "results": "results"
+            "/*": "home"
+                // "results": "results"
         },
 
         home: function () {
