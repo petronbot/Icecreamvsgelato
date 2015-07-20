@@ -19,6 +19,8 @@
 
 /* Site theme */
 
+$mobile: "screen and (max-width: 49em)";
+
 $cream: #fff7e3;
 $waffle: #dfa862;
 $yellow: #f1cd2f;
@@ -64,7 +66,9 @@ h3 {
 		padding: 0 1em 0.15em;
 		background: rgba($blue, 0.5);
 		border-radius: 50%;
-
+		@media #{$mobile} {
+			margin: 0 0.25em;
+		}
 	}
 }
 
@@ -73,27 +77,34 @@ h3 {
 }
 
 #candidates {
-	margin: 0 auto;
+	margin: 0 auto 3em;
+	padding: 0;
 	list-style-type: none;
 	li {
 		width: 35%;
-		padding-top: 35%; // Always a square
+		max-width: 800px;
+		padding: 35% 0 0 0; // Always a square
 		height: 0;
 		@include inline-block;
 
 		&:first-child { margin-right: 10%; }
 
 		&.icecream { 
-			background: transparent url('/img/ice-cream.png') no-repeat top center / 100% auto; 
+			background: transparent url('../img/ice-cream.png') no-repeat top center / 100% auto; 
 			button {
 				margin-right: -2em;
 			}
 		}
 		&.gelato { 
-			background: transparent url('/img/gelato.png') no-repeat top center / 100% auto; 
+			background: transparent url('../img/gelato.png') no-repeat top center / 100% auto; 
 			button {
 				margin-left: -2em;
 			}
+		}
+
+		@media #{$mobile} {
+			width: 40%;
+			padding: 40% 0 0 0; // Always a square
 		}
 
 	}
@@ -146,6 +157,11 @@ h3 {
 		&[disabled='disabled'] {
 			color: #dfa862;
 		}
+		@media #{$mobile} {
+			font-size: 75%;
+			padding: .5em .5em .75em;
+			margin: 0 .15em 1em;
+		}
 	}
 }
 
@@ -158,6 +174,7 @@ h3 {
 		@include inline-block;
 		width: 35%;
 		color: $cream;
+		padding: 0;
 		&:first-child { margin-right: 10%; }
 		p {
 			width: 4em;
